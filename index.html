@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Krish's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="tabs">
+        <button id="about-btn" class="active">About Me</button>
+        <button id="projects-btn">Projects</button>
+        <button id="orgs-btn">Organizations</button>
+        <button id="skills-btn">Skills</button>
+    </div>
+
+    <div class="content-box">
+        <div id="about" class="content active">
+            <h1>About Me</h1>
+            <p>Hello, I'm Krish Patel! I am a freshman majoring in computer science at the University of Texas at Dallas.
+            I am passionate about creating programs, problem-solving, and making projects. I have a large
+            interest in the medical field; however, I enjoy all types of coding projects.
+            I am currently still learning a lot, and I am very excited to progress my journey in the
+            computer science field.</p>
+            <div class="Contact">
+            <h2>Contacts</h2>
+            <p>Email: krish.patel.060506@gmail.com</p>
+            </div>
+        </div>
+
+        <div id="projects" class="content">
+            <h1>Projects</h1>
+            <h4>Poker Analysis</h4>
+            <p>Developed a program in C++ that used randomization techniques to simulate poker hands and analyze probabilities.
+            With the ability of arrays, I was able to generate numerous amounts of poker hands
+            and organize them into their respective category. In the process of creating this project
+            I learned the use of randomization, arrays, and the use of complex logical operators.</p>
+            <h4>One-time Pad</h4>
+            <p>Built a C++ encryption program using a One-Time Pad cipher for secure data communication. 
+            Reading files, static cast, and math were used to create this project. The program
+            would read a file of completely random characters on the ASCII table, which would then be converted 
+            to a message. Encryption and decryption are possible with this project.</p>
+        </div>
+
+        <div id="organizations" class="content">
+            <h1>Organizations</h1>
+            <h3>Dallas Formula Racing at UTD</h3>
+            <p>Contribute to software development for a competitive racing car. I currently am apart of the
+            software team where I create programs that can assist in the functioning of a formula racing vehicle
+            at UTD, which will participate in competitions in the near future.</p>
+            <h3>BMES at UTD</h3>
+            <p>Engage in discussions and research on biomedical engineering topics. I attend all meetings and learn
+            about opportunities that may require engineering or software. I enjoy the medical side of engineering 
+            and would enjoy being able to participate in a project where I can assist with the software side.</p>
+        </div>
+
+<div id="skills" class="content" style="padding-left: 20px;">
+    <h1>Skills</h1>
+    
+    <h2>Certifications</h2>
+    <p>Google Data Analytics, obtained in 2022</p>
+    
+    <h2>Technical Skills</h2>
+    <ul style="list-style-position: inside;">
+        <li>C++</li>
+        <li>Python</li>
+        <li>Java (Basic Knowledge)</li>
+        <li>MATLAB</li>
+        <li>Microsoft Excel</li>
+        <li>Microsoft Word</li>
+        <li>4 semesters of Business Information Management</li>
+    </ul>
+    
+    <h2>Languages</h2>
+    <ul style="list-style-position: inside;">
+        <li>Fluent in English</li>
+        <li>Fluent in speaking Gujarati</li>
+        <li>Intermediate level in Spanish</li>
+    </ul>
+</div>
+
+
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tabs button');
+        const contents = document.querySelectorAll('.content');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                contents.forEach(content => content.classList.remove('active'));
+                tabs.forEach(button => button.classList.remove('active'));
+
+                contents[index].classList.add('active');
+                tab.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
